@@ -1,18 +1,17 @@
 import React from 'react';
 
-type CounterDisplayProps = {
+type ButtonsProps = {
     count: number
+    maxNumber: number
     addToCounter: () => void
     removeToCounter: () => void
-    maxNumber: number
+
 }
 
 
-export function CounterDisplay(props: CounterDisplayProps) {
+export function Buttons(props: ButtonsProps) {
     return (
-        <div className="count">
-            <h1 className={props.count === props.maxNumber ? "endCount" : ""}>{props.count}</h1>
-
+        <div>
             <button className={props.count === props.maxNumber ? "noinc" : "inc"}
                     onClick={props.addToCounter}>inc
             </button>
